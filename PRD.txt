@@ -1,0 +1,64 @@
+# Product Requirements Document: Tic-Tac-Toe Game
+
+## 1. Overview
+A command-line implementation of tic-tac-toe featuring player vs. computer gameplay with score tracking.
+
+## 2. Functional Requirements
+
+### 2.1 Game Board
+- 3x3 grid representation
+- Display current board state after each move
+- Clear visual distinction between empty cells and player markers (X/O)
+
+### 2.2 Players
+- Human player input via command line
+- Computer opponent with basic AI
+- Random first-move determination (coin flip)
+- Player markers: Human (X), Computer (O)
+
+### 2.3 Gameplay Logic
+- Alternate turns between human and computer
+- Valid move validation
+- Win detection (3 in a row - horizontal, vertical, diagonal)
+- Draw detection (board full with no winner)
+- Computer AI should include:
+  - 85% optimal move selection
+  - 15% random/suboptimal move selection
+
+### 2.4 Score Tracking
+- Maintain running tally of:
+  - Human wins
+  - Computer wins
+  - Draws
+- Display current score after each game
+
+### 2.5 User Interface
+- Clear command-line interface
+- Input format: coordinates (e.g., "1,2" or "A2")
+- Display game status messages
+- Option to play again after game completion
+
+## 3. Technical Requirements
+
+### 3.1 Performance
+- Move computation < 1 second
+- Immediate response to user input
+
+### 3.2 Error Handling
+- Invalid input handling
+- Clear error messages
+- Graceful exit option
+
+### 3.3 Data Persistence
+- Session-only score tracking (no permanent storage)
+
+## 4. Constraints
+- Command-line interface only
+- Single-session gameplay
+- No external dependencies
+
+## 5. Success Criteria
+- Functional gameplay loop
+- Accurate win/draw detection
+- Verifiable computer move imperfection
+- Maintainable score tracking
