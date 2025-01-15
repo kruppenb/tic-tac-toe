@@ -270,6 +270,7 @@ h1::after {
     color: white;
     border: none;
     padding: 1rem 2rem;
+    margin: 0.5rem;
     font-size: 1.1rem;
     font-weight: 600;
     border-radius: 10px;

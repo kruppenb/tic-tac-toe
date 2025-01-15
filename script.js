@@ -20,9 +20,12 @@ class TicTacToe {
             cell.addEventListener('click', () => this.handleCellClick(cell));
         });
         this.newGameButton.addEventListener('click', () => this.resetGame());
+        this.flipCoinButton = document.getElementById('flip-coin');
+        this.flipCoinButton.addEventListener('click', () => this.performCoinToss());
 
-        // Start first game with coin toss
-        this.performCoinToss();
+        // Start with player X
+        this.currentPlayer = 'X';
+        this.updateStatus();
     }
 
     updateStatus() {
@@ -226,7 +229,8 @@ class TicTacToe {
             cell.className = 'cell';
         });
         this.gameActive = true;
-        this.performCoinToss();
+        this.currentPlayer = 'X';
+        this.updateStatus();
     }
 }
 
